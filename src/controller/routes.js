@@ -113,11 +113,11 @@ app.post("/livros", (req, res) => {
     console.log(soma)
     let sql = `INSERT INTO pessoa (nome, cpf, idade, cidade, estado, familia, pontos, situacao) VALUES ('${nome}', '${cpf}', '${idade}', '${cidade}', '${estado}', '${familia}', '${soma}', '${situacao}')`
 
-    /*db.query(sql, (err) => {
+    db.query(sql, (err) => {
         if (err) return res.json(err);
 
         return res.status(200).json("criado com sucesso")
-    })*/
+    })
 })
 
 //CONSULTAR PROFESSOR
